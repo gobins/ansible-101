@@ -3,9 +3,10 @@ Table of contents
 =================
 
 <!--ts-->
-   * [Config Managemet](### Config Management)
-   * [Table of contents](#table-of-contents)
-   * [Installation](#installation)
+   * [Config Managemet](###Config-Management)
+   * [Challenges](##Challenges)
+   * [Ansible](##Ansible)
+   * [Communication](##Communication)
    * [Usage](#usage)
       * [STDIN](#stdin)
       * [Local files](#local-files)
