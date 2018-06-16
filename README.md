@@ -4,18 +4,14 @@ Table of contents
 
 <!--ts-->
    * [Config Management](##config-management)
-   * [Challenges](##Challenges)
-   * [Ansible](##Ansible)
-   * [Communication](##Communication)
-   * [Usage](#usage)
-      * [STDIN](#stdin)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-      * [Auto insert and update TOC](#auto-insert-and-update-toc)
-   * [Tests](#tests)
-   * [Dependency](#dependency)
+   * [Challenges](##challenges)
+   * [Ansible](##ansible)
+   * [Communication](##communication)
+   * [Basic Structure](##basic-structure)
+      * [Playbooks](###playbooks)
+      * [Handlers](###handlers)
+   * [Running a playbook](##running-a-playbook)
+
 <!--te-->
 
 Config Management
@@ -24,25 +20,30 @@ Config Management
   - Users, Files, Services, Permissions
   - Chef(ruby), Puppet(ruby), Ansible(python), CFEngine(c), Salstack(python)
 
-## Challenges
+Challenges
+==========
   - Handcrafted machines
   - Config Drift
   - Not reproducible and buggy
   - Time consuming
 
-## Ansible
+Ansible
+==========
   - Agentless
   - Config is written in yaml
   - Very easy to learn
   - Easy to read
 
-## Communication
+Communication
+=============
   - SSH for unix/linux
   - Winrm for Windows
  
-## Basic Structure of Ansible code
+Basic Structure
+===============
 
-### Playbooks
+Playbooks
+---------
 ```
 ---
 - hosts: webservers
@@ -75,7 +76,8 @@ Config Management
         state: restarted
 ```
 
-#### Handlers
+Handlers
+--------
 ```
 handlers:
     - name: restart memcached
@@ -95,7 +97,8 @@ tasks:
       notify: "restart web services"
 ```
 
-#### Running a playbook
+Running a playbook
+==================
 ```
 ansible-playbook playbook.yml
 ansible-playbook playbook.yml -vvvv
