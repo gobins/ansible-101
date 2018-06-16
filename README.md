@@ -3,7 +3,7 @@ Table of contents
 =================
 
 <!--ts-->
-   * [Config Managemet](###Config-Management)
+   * [Config Managemet](##Config-Management)
    * [Challenges](##Challenges)
    * [Ansible](##Ansible)
    * [Communication](##Communication)
@@ -18,7 +18,8 @@ Table of contents
    * [Dependency](#dependency)
 <!--te-->
 
-## Config Management
+Config Management
+=================
   - OS Configuration
   - Users, Files, Services, Permissions
   - Chef(ruby), Puppet(ruby), Ansible(python), CFEngine(c), Salstack(python)
