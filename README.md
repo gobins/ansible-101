@@ -3,7 +3,7 @@ Table of contents
 =================
 
 <!--ts-->
-   * [Config Managemet](##Config-Management)
+   * [Config Management](##config-management)
    * [Challenges](##Challenges)
    * [Ansible](##Ansible)
    * [Communication](##Communication)
