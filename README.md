@@ -1,9 +1,7 @@
 # ansible-101
-Table of contents
-=================
 
-<!--ts-->
-   * [Config Management](##config-management)
+## Table of contents
+- [Config Management](#config-management)
    * [Challenges](##challenges)
    * [Ansible](##ansible)
    * [Communication](##communication)
@@ -12,10 +10,8 @@ Table of contents
       * [Handlers](###handlers)
    * [Running a playbook](##running-a-playbook)
 
-<!--te-->
 
-Config Management
-=================
+## Config Management
   - OS Configuration
   - Users, Files, Services, Permissions
   - Chef(ruby), Puppet(ruby), Ansible(python), CFEngine(c), Salstack(python)
