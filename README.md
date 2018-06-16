@@ -2,13 +2,13 @@
 
 ## Table of contents
 - [Config Management](#config-management)
-   * [Challenges](##challenges)
-   * [Ansible](##ansible)
-   * [Communication](##communication)
-   * [Basic Structure](##basic-structure)
-      * [Playbooks](###playbooks)
-      * [Handlers](###handlers)
-   * [Running a playbook](##running-a-playbook)
+- [Challenges](#challenges)
+- [Ansible](#ansible)
+- [Basic Structure](#basic-structure)
+  * [Playbooks](#playbooks)
+  * [Handlers](#handlers)
+  * [Iventory](#inventory)
+- [Running a playbook](#running-a-playbook)
 
 
 ## Config Management
@@ -16,30 +16,23 @@
   - Users, Files, Services, Permissions
   - Chef(ruby), Puppet(ruby), Ansible(python), CFEngine(c), Salstack(python)
 
-Challenges
-==========
+## Challenges
   - Handcrafted machines
   - Config Drift
   - Not reproducible and buggy
   - Time consuming
 
-Ansible
-==========
+## Ansible
   - Agentless
   - Config is written in yaml
   - Very easy to learn
   - Easy to read
-
-Communication
-=============
   - SSH for unix/linux
   - Winrm for Windows
  
-Basic Structure
-===============
+## Basic Structure
 
-Playbooks
----------
+### Playbooks
 ```
 ---
 - hosts: webservers
@@ -72,8 +65,7 @@ Playbooks
         state: restarted
 ```
 
-Handlers
---------
+### Handlers
 ```
 handlers:
     - name: restart memcached
@@ -93,15 +85,6 @@ tasks:
       notify: "restart web services"
 ```
 
-Running a playbook
-==================
-```
-ansible-playbook playbook.yml
-ansible-playbook playbook.yml -vvvv
-ansible-playbook playbook.yml --syntax-check
-ansible-playbook playbook.yml --list-hosts
-ansible-playbook foo.yml --check
-```
 ### Inventory
 ```
   ---
@@ -114,3 +97,14 @@ ansible-playbook foo.yml --check
           foo.example.com:
           bar.example.com: 
 ```
+
+Running a playbook
+==================
+```
+ansible-playbook playbook.yml
+ansible-playbook playbook.yml -vvvv
+ansible-playbook playbook.yml --syntax-check
+ansible-playbook playbook.yml --list-hosts
+ansible-playbook foo.yml --check
+```
+
